@@ -1,1 +1,2 @@
 # Videocall_Blow_Out_Remotely_Candle
+Con este proyecto podras apagar remotamente una vela de cumpleanhos a traves de una video llamada implemntado un sistema creado mediante arduino, un ventilador, un microfono, un snesor de flama y algo de imaginacion. en la carpeta "Esquematicos" podras encontar mas detalles hacerca del montaje; en la carpeta "Firmware" podras encontrar el codigo de control y las instrucciones que debes configuara segun tu caso. puedes ver un ejemplo del funcionamineto aqui -->
