@@ -3,6 +3,7 @@
 //Definir servo
 Servo fanOnOff; 
 //Variables
+const int led = 13;
 const int mic = A0;  
 const int candle = 2; 
 int sound;
@@ -27,6 +28,8 @@ void setup()
   fanOnOff.attach(3);
   fanOnOff.write(0);
   pinMode(candle, INPUT);
+  pinMode(led, OUTPUT);
+  digitalWrite(led, LOW);
   Serial.begin(9600);
 }
 
@@ -67,6 +70,8 @@ void loop()
       {
         //secuencia para activar el ventilador y apagar las velas
         //esta secuencia puede varia deacuerdo a su ventilador configurela para su propio caso si este no se acopla al suyo
+        digitalWrite(led, HIGH);
+        delay(1200);
         fanOnOff.write(50);
         delay(300);
         fanOnOff.write(0);
@@ -83,6 +88,7 @@ void loop()
         delay(300);
         fanOnOff.write(0); 
         countPeak = 0;  
+        digitalWrite(led, LOW);
       }
       else
       {
